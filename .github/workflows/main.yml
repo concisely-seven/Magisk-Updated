@@ -66,14 +66,9 @@ jobs:
                        name="YousufSohail-AKA-PeerSahab-V6.0"         \
                        toolchain=$TOOLCHAIN      \
                        magisk=v31.0              \
-                       +ttl                      \
-                       +wireguard                \
-                       +cifs                     \
+                       -nohardening              \
                        +sdfat                    \
                        +ntfs                     \
-                       +force_dex_wqhd           \
-                       +morosound                \
-                       +boeffla_wl_blocker       \
           2>&1 | tee config.info
 
       - name: Install gcc-aarch64-linux-gnu
