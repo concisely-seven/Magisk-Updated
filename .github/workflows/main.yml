@@ -9,6 +9,7 @@ env:
   # append the auto '+' suffix -> exact kernel release string, no trailing +
   LOCALVERSION: ""
   TOOLCHAIN: cruel
+  NODEFAULTS: 1
   INSTALLER: yes
 
 jobs:
