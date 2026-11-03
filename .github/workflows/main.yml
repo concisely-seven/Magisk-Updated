@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        model: [ "G977B,G977N" ]
+        model: [ "N971N" ]
 
     steps:
       - uses: actions/checkout@v4
@@ -66,7 +66,6 @@ jobs:
                        name="YousufSohail-AKA-PeerSahab-V6.0"         \
                        toolchain=$TOOLCHAIN      \
                        magisk=v31.0              \
-                       +nohardening              \
                        +ttl                      \
                        +wireguard                \
                        +cifs                     \
