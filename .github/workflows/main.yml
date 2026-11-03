@@ -3,14 +3,14 @@ name: Build
 on: [push]
 
 env:
-  KBUILD_BUILD_USER: "Contact-Yssaqib"
-  KBUILD_BUILD_HOST: "gmail.com"
+  KBUILD_BUILD_USER:  "Aurora"
+  KBUILD_BUILD_HOST: "N971N"
   # LOCALVERSION must be set (even empty) so scripts/setlocalversion does not
   # append the auto '+' suffix -> exact kernel release string, no trailing +
   LOCALVERSION: ""
   TOOLCHAIN: cruel
-  NODEFAULTS: 1
-  INSTALLER: yes
+  INSTALLER: "yes"
+  NODEFAULTS: "1"
 
 jobs:
   build:
@@ -66,7 +66,7 @@ jobs:
                        model=${{ matrix.model }} \
                        name="YousufSohail-AKA-PeerSahab-V6.0"         \
                        toolchain=$TOOLCHAIN      \
-                       magisk=v31.0              \
+                       +magisk=v31.0              \
                        -nohardening              \
                        +sdfat                    \
                        +ntfs                     \
