@@ -23,6 +23,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - name: Remove preloaded Kitsune Mask
+        run: rm -f usr/magisk/magiskinit
       - uses: actions/setup-python@v5
         with:
           python-version: '3.7'
@@ -33,7 +35,8 @@ jobs:
         run: |
           sudo sed -i 's|mirror+file:/etc/apt/apt-mirrors.txt|http://archive.ubuntu.com/ubuntu/|g' /etc/apt/sources.list
           sudo apt-get update
-          sudo apt-get install -y -qq libtinfo5 ccache || sudo apt-get install -y -qq --fix-missing libtinfo5 ccache
+          sudo apt-get install -y -qq libtinfo5 ccache python2 || sudo apt-get install -y -qq --fix-missing libtinfo5 ccache python2
+          python2 --version
 
 
       - name: Disable compression in ccache and set ccache path
